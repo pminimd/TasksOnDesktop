@@ -13,6 +13,7 @@
         "appId": "com.example.taskfloat",
         "productName": "TaskFloatApp",
         "copyright": "Copyright © 2025 MarsNgok",  
+        "publish": null,
         "directories": {
             "buildResources": "assets",
             "output": "dist"
