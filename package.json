@@ -23,28 +23,14 @@
             "preload/**/*",
             "tasks.json"
         ],
-        "extraMetadata": {
-            "main": "main/index.js"
-        },
-        "icon": "assets/android-chrome-512x512",
         "win": {
-            "target": [
-                {
-                    "target": "nsis",
-                    "arch": [
-                        "x64"
-                    ]
-                }
-            ],
-            "icon": "assets/android-chrome-512x512.png"
+            "target": "nsis",
+            "icon": "assets/favicon.ico"
         },
         "nsis": {
             "oneClick": false,
             "perMachine": false,
-            "allowToChangeInstallationDirectory": true,
-            "createDesktopShortcut": true,
-            "createStartMenuShortcut": true,
-            "shortcutName": "TaskFloatApp"
+            "allowToChangeInstallationDirectory": true
         }
     },
     "dependencies": {
