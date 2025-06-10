@@ -1,0 +1,16 @@
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    background: transparent; /* ✅ 必须设置透明 */
+  }
+  
+  .draggable {
+    -webkit-app-region: drag;   /* ✅ 允许拖动 */
+    height: 100%;               /* 或指定高度，比如 50px */
+    background-color: rgba(0,0,0,0.2); /* ✅ 半透明背景，美观用 */
+  }
+  
+  .no-drag {
+    -webkit-app-region: no-drag;  /* ✅ 按钮或交互区域，禁止拖动 */
+  }
+  
