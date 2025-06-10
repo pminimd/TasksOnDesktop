@@ -1,0 +1,61 @@
+{
+    "name": "task-float-app",
+    "version": "1.0.0",
+    "description": "A floating task management desktop app built with React and Electron.",
+    "author": "Mars Ngok <pminimd@gmail.com>",
+    "main": "main/index.js",
+    "scripts": {
+        "dev": "concurrently \"vite\" \"electron .\"",
+        "build": "vite build && electron-builder",
+        "start": "electron ."
+    },
+    "build": {
+        "appId": "com.example.taskfloat",
+        "productName": "TaskFloatApp",
+        "copyright": "Copyright © 2025 MarsNgok",  
+        "directories": {
+            "buildResources": "assets",
+            "output": "dist"
+        },
+        "files": [
+            "build/**/*",
+            "main/**/*",
+            "preload/**/*",
+            "tasks.json"
+        ],
+        "extraMetadata": {
+            "main": "main/index.js"
+        },
+        "icon": "assets/android-chrome-512x512",
+        "win": {
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "icon": "assets/android-chrome-512x512.png"
+        },
+        "nsis": {
+            "oneClick": false,
+            "perMachine": false,
+            "allowToChangeInstallationDirectory": true,
+            "createDesktopShortcut": true,
+            "createStartMenuShortcut": true,
+            "shortcutName": "TaskFloatApp"
+        }
+    },
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^4.5.1",
+        "concurrently": "^8.2.2",
+        "electron": "^28.1.3",
+        "electron-builder": "^26.0.12",
+        "vite": "^5.0.0"
+    }
+}
